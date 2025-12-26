@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Registration | Kleine Kuppe Private School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="registration.css">
+    <link rel="icon" type="image/png" href="images/Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        <p>Demo website created for Kleine Kuppe Private School - ready to go live in 2 hours</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="Kleine Kuppe Private School Logo">
+                </a>
+                <div class="logo-text">
+                    <span class="school-name">Kleine Kuppe Private School</span>
+                    <span class="motto">"In Pursuit of Excellence"</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="registration.html" class="btn-register active">Register Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Header -->
+    <section class="registration-header">
+        <div class="container">
+            <h1>Online Registration</h1>
+            <p>Enroll your child at Kleine Kuppe Private School today</p>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <img src="images/Logo.png" alt="School Logo" class="form-logo">
+                    <h2>Student Registration Form</h2>
+                    <p>Please fill in all required fields marked with *</p>
+                </div>
+
+                <form id="registrationForm" class="registration-form">
+                    <!-- Program Selection -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-book"></i> Program Selection</h3>
+                        <div class="form-group">
+                            <label for="program">Select Program *</label>
+                            <select id="program" name="program" required>
+                                <option value="">-- Select Program --</option>
+                                <option value="Daycare">Daycare</option>
+                                <option value="Afterschool Care">Afterschool Care</option>
+                                <option value="Pre-Primary">Pre-Primary</option>
+                                <option value="Primary School">Primary School</option>
+                                <option value="Secondary School">Secondary School</option>
+                                <option value="Grade 12 Part-Time Tutorials">Grade 12 Part-Time Tutorials</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Personal Details -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Personal Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter student's full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="idNumber">ID Number *</label>
+                                <input type="text" id="idNumber" name="idNumber" placeholder="Enter ID number" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Date of Birth *</label>
+                                <div class="dob-selects">
+                                    <select id="dobDay" name="dobDay" required>
+                                        <option value="">Day</option>
+                                    </select>
+                                    <select id="dobMonth" name="dobMonth" required>
+                                        <option value="">Month</option>
+                                        <option value="01">January</option>
+                                        <option value="02">February</option>
+                                        <option value="03">March</option>
+                                        <option value="04">April</option>
+                                        <option value="05">May</option>
+                                        <option value="06">June</option>
+                                        <option value="07">July</option>
+                                        <option value="08">August</option>
+                                        <option value="09">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                    <select id="dobYear" name="dobYear" required>
+                                        <option value="">Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender *</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">-- Select Gender --</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="e.g., 081 123 4567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="e.g., parent@email.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Parent/Guardian Details -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-users"></i> Parent/Guardian Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parentName">Parent/Guardian Name *</label>
+                                <input type="text" id="parentName" name="parentName" placeholder="Enter parent/guardian name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="relationship">Relationship *</label>
+                                <select id="relationship" name="relationship" required>
+                                    <option value="">-- Select --</option>
+                                    <option value="Mother">Mother</option>
+                                    <option value="Father">Father</option>
+                                    <option value="Guardian">Guardian</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parentPhone">Parent Phone *</label>
+                                <input type="tel" id="parentPhone" name="parentPhone" placeholder="e.g., 081 123 4567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parentEmail">Parent Email</label>
+                                <input type="email" id="parentEmail" name="parentEmail" placeholder="e.g., parent@email.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous School -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-school"></i> Previous School</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="previousSchool">Previous School Name</label>
+                                <input type="text" id="previousSchool" name="previousSchool" placeholder="Enter previous school name (if applicable)">
+                            </div>
+                            <div class="form-group">
+                                <label for="gradeCompleted">Last Grade Completed</label>
+                                <input type="text" id="gradeCompleted" name="gradeCompleted" placeholder="e.g., Grade 7">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Session Preference (For Tutorials) -->
+                    <div class="form-section session-section" id="sessionSection" style="display: none;">
+                        <h3><i class="fas fa-clock"></i> Session Preference</h3>
+                        <div class="form-group">
+                            <label>Select your preferred session *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="session" value="Part-time (17:00-20:00)">
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-text">
+                                        <strong>Part-time</strong>
+                                        <small>17:00 - 20:00 (Evening Classes)</small>
+                                    </span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="session" value="Full-time (08:00-17:00)">
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-text">
+                                        <strong>Full-time</strong>
+                                        <small>08:00 - 17:00 (Day Classes)</small>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subject Selection (For Tutorials) -->
+                    <div class="form-section subjects-section" id="subjectsSection" style="display: none;">
+                        <h3><i class="fas fa-book-open"></i> Subject Selection</h3>
+                        <p class="section-note">Select the subjects you wish to register for:</p>
+                        <div class="subjects-grid">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Mathematics">
+                                <span class="checkbox-custom"></span>
+                                Mathematics
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="English">
+                                <span class="checkbox-custom"></span>
+                                English
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Physical Science">
+                                <span class="checkbox-custom"></span>
+                                Physical Science
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Biology">
+                                <span class="checkbox-custom"></span>
+                                Biology
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Chemistry">
+                                <span class="checkbox-custom"></span>
+                                Chemistry
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Accounting">
+                                <span class="checkbox-custom"></span>
+                                Accounting
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Business Studies">
+                                <span class="checkbox-custom"></span>
+                                Business Studies
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Economics">
+                                <span class="checkbox-custom"></span>
+                                Economics
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Geography">
+                                <span class="checkbox-custom"></span>
+                                Geography
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="History">
+                                <span class="checkbox-custom"></span>
+                                History
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Afrikaans">
+                                <span class="checkbox-custom"></span>
+                                Afrikaans
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Oshiwambo">
+                                <span class="checkbox-custom"></span>
+                                Oshiwambo
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Computer Studies">
+                                <span class="checkbox-custom"></span>
+                                Computer Studies
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Hostel Accommodation -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-home"></i> Accommodation</h3>
+                        <div class="form-group">
+                            <label class="checkbox-label hostel-checkbox">
+                                <input type="checkbox" id="hostel" name="hostel" value="Yes">
+                                <span class="checkbox-custom"></span>
+                                <span>
+                                    <strong>Hostel Accommodation Required</strong>
+                                    <small>Check this box if you require hostel accommodation for the student</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-info-circle"></i> Additional Information</h3>
+                        <div class="form-group">
+                            <label for="additionalInfo">Any additional information, special needs, or comments:</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Enter any additional information here..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submission Method -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-paper-plane"></i> Submission Method</h3>
+                        <p class="section-note">Choose how you'd like to submit your registration:</p>
+                        <div class="submission-options">
+                            <label class="submission-option">
+                                <input type="radio" name="submissionMethod" value="whatsapp" checked>
+                                <span class="option-card">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <strong>WhatsApp</strong>
+                                    <small>Quick & instant delivery</small>
+                                </span>
+                            </label>
+                            <label class="submission-option">
+                                <input type="radio" name="submissionMethod" value="email">
+                                <span class="option-card">
+                                    <i class="fas fa-envelope"></i>
+                                    <strong>Email</strong>
+                                    <small>Formal submission</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Submit -->
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="checkbox-label terms-checkbox">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkbox-custom"></span>
+                                <span>I confirm that the information provided is accurate and I agree to the school's terms and conditions *</span>
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                                <i class="fab fa-whatsapp" id="submitIcon"></i> <span id="submitText">Submit via WhatsApp</span>
+                            </button>
+                            <button type="reset" class="btn btn-outline btn-reset">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Form Notes -->
+                <div class="form-notes">
+                    <h4><i class="fas fa-exclamation-circle"></i> Important Notes:</h4>
+                    <ul>
+                        <li>Please ensure all information is accurate before submitting.</li>
+                        <li>After submission, you will be redirected to WhatsApp to send your registration.</li>
+                        <li>Our admissions team will contact you within 24-48 hours.</li>
+                        <li>For immediate assistance, call us at <a href="tel:065230063">065 230 063</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Strip -->
+    <section class="contact-strip">
+        <div class="container">
+            <div class="contact-strip-grid">
+                <div class="contact-strip-item">
+                    <i class="fas fa-phone"></i>
+                    <span>065 230 063</span>
+                </div>
+                <div class="contact-strip-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>kleinekuppeps@gmail.com</span>
+                </div>
+                <div class="contact-strip-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dr Libertina Amathila St, Ongwediva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none; padding: 0;">
+                <p>&copy; 2025 Kleine Kuppe Private School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/264816725850" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
