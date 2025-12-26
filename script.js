@@ -213,8 +213,8 @@ function populateDOBDropdowns() {
         daySelect.appendChild(option);
     }
 
-    // Populate years (from current year down to 1950)
-    const currentYear = new Date().getFullYear();
+    // Populate years (from 2026 down to 1950)
+    const currentYear = 2026;
     for (let i = currentYear; i >= 1950; i--) {
         const option = document.createElement('option');
         option.value = i.toString();
